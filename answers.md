@@ -8,7 +8,7 @@ Source can be found [on github](https://github.com/perl6/faq).
 <span id="so" />
 ### What is `so`?
 
-`so` is loose precedence operator that coerces to `Bool`.
+`so` is a loose precedence operator that coerces to `Bool`.
 
 It has the same semantics as the `?` prefix operator, just like
 `and` is the low-precedence version of `&&`.
