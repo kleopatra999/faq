@@ -102,6 +102,16 @@ routines that return lazy lists:
     # on a lazy list
     my @squares := (1..*).map(-> $x { $x * $x });
 
+<span id="sigils" />
+### Why sigils? Couldn't you do without them?
+
+There are several reasons:
+
+* they make it easy to interpolate variables into strings
+* they form micro-namespaces for different variables, thus avoiding name clashes
+* they allow easy single/plural distinction
+* many natural languages use mandatory noun markers, so our brains are built to handle it
+
 
 <span id="meta" />
 ## Meta Questions and Advocacy
