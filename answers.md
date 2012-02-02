@@ -129,6 +129,7 @@ matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
 
 
+<span id="features" />
 ### Why should I learn Perl 6? What's so great about it?
 
 Perl 6 unifies many great ideas that aren't usually found in other programming
@@ -163,3 +164,7 @@ It also offers
 * expressive routine signatures (unlike Perl 5)
 * state variables
 * named regexes for easy reuse
+
+Please see the [feature comparison
+matrix](http://perl6.org/compilers/features) for an overview of implemented
+features.
