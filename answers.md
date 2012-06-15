@@ -112,6 +112,40 @@ There are several reasons:
 * they allow easy single/plural distinction
 * many natural languages use mandatory noun markers, so our brains are built to handle it
 
+<span id="privattr">
+### Why can't I initialize private attributes from the new method, and how can I fix this?
+
+A code like
+
+    class A {
+        has $!x;
+        method show-x {
+            say $!x;
+        }
+    }
+    A.new(x => 5).show-x;
+
+does not print 5. Private attributes are /private/, which means invisible to
+the outside. If the default constructor could initialize them, they would leak
+into the public API.
+
+If you still want it to work, you can a `submethod BUILD` that initializes
+them:
+
+    class B {
+        has $!x;
+        submethod BUILD(:$!x) { }
+        method show-x {
+            say $!x;
+        }
+    }
+    A.new(x => 5).show-x;
+
+`BUILD` is called by the default constructor (indirectly, see
+http://perlgeek.de/blog-en/perl-6/object-construction-and-initialization.html
+for more details) with all the named arguments that the user passes to the
+constructor. `:$!x` is a named parameter with name `x`, and when called
+with a named argument of name `x`, its value is bound to the attribute `$!x`.
 
 <span id="meta" />
 ## Meta Questions and Advocacy
