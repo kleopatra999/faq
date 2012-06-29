@@ -207,7 +207,7 @@ Unlike most languages, it offers
 * easy access to higher-order functional features like partial application and currying
 * separate mechanism for subtyping (inheritance) and code reuse (role application)
 * optional type annotations
-* power run-time multi dispatch for both subroutines and methods based on
+* powerful run-time multi dispatch for both subroutines and methods based on
   arity, types and additional code constraints
 * lexical imports
 
@@ -225,6 +225,9 @@ It also offers
 * expressive routine signatures (unlike Perl 5)
 * state variables
 * named regexes for easy reuse
+* unlike many dynamic languages, calls to missing subroutines are caught
+  at compile time, and in some cases even signature mismatches can be
+  caught at compile time.
 
 Please see the [feature comparison
 matrix](http://perl6.org/compilers/features) for an overview of implemented
