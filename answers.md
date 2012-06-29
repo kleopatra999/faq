@@ -147,6 +147,33 @@ for more details) with all the named arguments that the user passes to the
 constructor. `:$!x` is a named parameter with name `x`, and when called
 with a named argument of name `x`, its value is bound to the attribute `$!x`.
 
+<span id="say" />
+### How and why do `say` and `print` differ?
+
+The most obvious difference is that `say` appends a newline at the
+end of the output, and `print` does not.
+
+But there is another difference: `print` converts its arguments to
+a string by calling the `Str` method on each item passed to, `say`
+uses the `gist` method instead. The former is meant for computers,
+the latter for human interpretation.
+
+Or phrased different, `$obj.Str` gives a string representation,
+`$obj.gist` a short summary of that object suitable for fast recognition
+by the programmer.
+
+For example type objects, also known as "undefined values", stringify
+to an empty string and warn, whereas the `gist` method returns the name
+of the type, followed by an empty pair of parenthesis (to indicate there's
+nothing in that value except the type).
+
+    my Date $x;     # $x now contains the Date type object
+    print $x;       # empty string plus warning
+    say $x;         # Date()\n
+
+So `say` is optimized for debugging, `print` more suitable for
+producing output that another program is supposed to work with.
+
 <span id="meta" />
 ## Meta Questions and Advocacy
 
