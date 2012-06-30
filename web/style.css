@@ -34,4 +34,6 @@ code {
     padding:0.5em;
     font-family:monospace; }
 
+pre code { padding:0em; }
+
 p { text-align: justify }
