@@ -240,4 +240,7 @@ features.
 <span id='diefail' />
 ### What's the difference between `die` and `fail`?
 
+<span id='tokenrule' />
+### What's the difference between `token` and `rule` ?
+
 
