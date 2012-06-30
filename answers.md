@@ -84,6 +84,17 @@ or by calling the `.item` method on an expression.
 `[...]` array literals do not flatten into lists.
 
 
+<span id="sigils" />
+### Why sigils? Couldn't you do without them?
+
+There are several reasons:
+
+* they make it easy to interpolate variables into strings
+* they form micro-namespaces for different variables, thus avoiding name clashes
+* they allow easy single/plural distinction
+* many natural languages use mandatory noun markers, so our brains are built to handle it
+
+
 <span id="coroutine" />
 ### Does Perl 6 have coroutines? What about `yield`?
 
@@ -101,16 +112,6 @@ routines that return lazy lists:
     # second method, use .map or similar method
     # on a lazy list
     my @squares := (1..*).map(-> $x { $x * $x });
-
-<span id="sigils" />
-### Why sigils? Couldn't you do without them?
-
-There are several reasons:
-
-* they make it easy to interpolate variables into strings
-* they form micro-namespaces for different variables, thus avoiding name clashes
-* they allow easy single/plural distinction
-* many natural languages use mandatory noun markers, so our brains are built to handle it
 
 <span id="privattr">
 ### Why can't I initialize private attributes from the new method, and how can I fix this?
