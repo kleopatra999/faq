@@ -159,9 +159,9 @@ a string by calling the `Str` method on each item passed to, `say`
 uses the `gist` method instead. The former is meant for computers,
 the latter for human interpretation.
 
-Or phrased different, `$obj.Str` gives a string representation,
+Or phrased differently, `$obj.Str` gives a string representation,
 `$obj.gist` a short summary of that object suitable for fast recognition
-by the programmer.
+by the programmer, and `$obj.perl` gives a Perlish representation.
 
 For example type objects, also known as "undefined values", stringify
 to an empty string and warn, whereas the `gist` method returns the name
@@ -172,8 +172,8 @@ nothing in that value except the type).
     print $x;       # empty string plus warning
     say $x;         # Date()\n
 
-So `say` is optimized for debugging, `print` more suitable for
-producing output that another program is supposed to work with.
+So `say` is optimized for debugging and display to people, `print` 
+is more suitable for producing output for other programs to consume.
 
 <span id="meta" />
 ## Meta Questions and Advocacy
