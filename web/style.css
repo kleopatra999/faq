@@ -26,7 +26,9 @@ h2 {
 
 h3 {
     background: #f5ef7b;
-    border-color: #f2c100; }
+    border-color: #f2c100; 
+    margin:25px 0 0 0;
+}
 
 code {
     color:#111;
@@ -34,6 +36,7 @@ code {
     padding:0.5em;
     font-family:monospace; }
 
+pre { margin-left: 40px; }
 pre code { padding:0em; }
 
 #faq ul { margin-left: 40px; }
