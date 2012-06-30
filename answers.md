@@ -233,3 +233,11 @@ It also offers
 Please see the [feature comparison
 matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
+
+<span id='needanswers' />
+## Questions still wanting answers
+
+<span id='diefail' />
+### What's the difference between `die` and `fail`?
+
+
