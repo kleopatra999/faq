@@ -21,11 +21,11 @@ In this example, the result of the comparison (which is a `Junction`), is
 converted to Bool before being printed.
 
 <span id="eigenstate" />
-### How can I extract the eigenstates from a `Junction`?
+### How can I extract the values from a `Junction`?
 
-If you want to extract the eigenstates from a junction, you are doing
-something wrong. Junctions are meant as matchers, not for doing algebra
-with them.
+If you want to extract the values (eigenstates) from a junction, you 
+are probably doing something wrong. Junctions are meant as matchers, 
+not for doing algebra with them.
 
 If you want to do it anyway, you can abuse autothreading for that:
 
