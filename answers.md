@@ -175,7 +175,7 @@ nothing in that value except the type).
 So `say` is optimized for debugging and display to people, `print` 
 is more suitable for producing output for other programs to consume.
 
-<span id='tokenrule' /> <span id='token' /> <span id='rule' />
+<span id="tokenrule" /> <span id="token" /> <span id="rule" />
 ### What's the difference between `token` and `rule` ?
 
 `regex`, `token` and `rule` all three introduce regexes, but with
@@ -191,6 +191,22 @@ matches whitespace, which is optional except between two word
 characters).
 
 `regex` declares a plain regex without any implied modifiers.
+
+<span id="diefail" /><span id="fail">
+### What's the difference between `die` and `fail`?
+
+`die` throws an exception.
+
+If `use fatal;` (which is dynamically scoped) is in scope, `fail` also
+throws an exception. Otherwise it returns a `Failure` from the routine
+it is called from. 
+
+A `Failure` is an "unthrown" or "soft" exception. It is an object that
+contains the exception, and throws the exception when the Failure is used
+as an ordinary object.
+
+A Failure returns False from a `defined` check, and you can exctract
+the exception with the `exception` method.
 
 <span id="meta" />
 ## Meta Questions and Advocacy
@@ -251,9 +267,7 @@ Please see the [feature comparison
 matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
 
-<span id='needanswers' />
+<span id="needanswers" />
 ## Questions still wanting answers
 
-<span id='diefail' />
-### What's the difference between `die` and `fail`?
-
+(none at the moment)
