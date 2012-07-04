@@ -175,6 +175,23 @@ nothing in that value except the type).
 So `say` is optimized for debugging and display to people, `print` 
 is more suitable for producing output for other programs to consume.
 
+<span id='tokenrule' /> <span id='token' /> <span id='rule' />
+### What's the difference between `token` and `rule` ?
+
+`regex`, `token` and `rule` all three introduce regexes, but with
+slightly different semantics.
+
+`token` implies the `:ratchet` or `:r` modifier, which prevents the
+rule from backtracking.
+
+`rule` implies both the `:ratchet` and `:sigspace` (short `:s`)
+modifer, which means a rule doesn't backtrace, and it treats
+whitespace in the text of the regex as  `<.ws>` calls (ie
+matches whitespace, which is optional except between two word
+characters).
+
+`regex` declares a plain regex without any implied modifiers.
+
 <span id="meta" />
 ## Meta Questions and Advocacy
 
@@ -239,8 +256,4 @@ features.
 
 <span id='diefail' />
 ### What's the difference between `die` and `fail`?
-
-<span id='tokenrule' />
-### What's the difference between `token` and `rule` ?
-
 
