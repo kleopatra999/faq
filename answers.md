@@ -188,7 +188,8 @@ rule from backtracking.
 modifer, which means a rule doesn't backtrace, and it treats
 whitespace in the text of the regex as  `<.ws>` calls (ie
 matches whitespace, which is optional except between two word
-characters).
+characters). Whitespace at the start of the regex and at the start
+of each branch of an alternation is ignored.
 
 `regex` declares a plain regex without any implied modifiers.
 
