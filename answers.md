@@ -209,6 +209,25 @@ as an ordinary object.
 A Failure returns False from a `defined` check, and you can exctract
 the exception with the `exception` method.
 
+<span id="want" /><span id="wantarray" />
+### Why is `wantarray` or `want` gone? Can I return different things in different contexts?
+
+Perl has the `wantarry` function that tells you whether it is called in
+void, scalar or list context. Perl 6 has no equivalent construct,
+because context does not flow inwards, i.e. a routine cannot know which
+context it is called in.
+
+One reason is that Perl 6 has multi dispatch, and in a code example like
+
+    multi w(Int $x) { say 'Int' }
+    multi w(Str $x) { say 'Str' }
+    w(f());
+
+there is no way to determine if the caller of sub `f` wants a string or
+an integer, because it is not yet known what the caller is. In general
+this is requires solving the halting problem, which even Perl 6 compiler
+writers have trouble with.
+
 <span id="meta" />
 ## Meta Questions and Advocacy
 
