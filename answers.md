@@ -225,8 +225,15 @@ One reason is that Perl 6 has multi dispatch, and in a code example like
 
 there is no way to determine if the caller of sub `f` wants a string or
 an integer, because it is not yet known what the caller is. In general
-this is requires solving the halting problem, which even Perl 6 compiler
+this requires solving the halting problem, which even Perl 6 compiler
 writers have trouble with.
+
+The way to achieve context sensitivity in Perl 6 is to return an object
+that knows how to respond to method calls that are typical for a context.
+
+For example regex matches return [Match objects that know how to respond
+to list indexing, hash indexing, and that can turn into the matched
+string](http://doc.perl6.org/type/Match).
 
 <span id="meta" />
 ## Meta Questions and Advocacy
