@@ -294,6 +294,14 @@ Please see the [feature comparison
 matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
 
+<span id="cpan" /><span id="CPAN" />
+## Is there a CPAN for Perl 6? Or will Perl 6 use the Perl 5 CPAN?
+
+There isn't yet a module repository for Perl 6 as sophisticated as CPAN.
+But [modules.perl6.org](http://modules.perl6.org/) has a ist of known
+Perl 6 modules, and [panda](https://github.com/tadzik/panda/) can install
+and precompile those that work with [rakudo](http://rakudo.org/).
+
 <span id="needanswers" />
 ## Questions still wanting answers
 
