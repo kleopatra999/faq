@@ -2,10 +2,10 @@
 
 Source can be found [on github](https://github.com/perl6/faq).
 
-<span id="language" />
+<span id="language"></span>
 ## Language Features
 
-<span id="so" />
+<span id="so"></span>
 ### What is `so`?
 
 `so` is a loose precedence operator that coerces to `Bool`.
@@ -20,7 +20,7 @@ Example usage:
 In this example, the result of the comparison (which is a `Junction`), is
 converted to Bool before being printed.
 
-<span id="eigenstate" />
+<span id="eigenstate"></span>
 ### How can I extract the values from a `Junction`?
 
 If you want to extract the values (eigenstates) from a junction, you 
@@ -39,7 +39,7 @@ If you want to do it anyway, you can abuse autothreading for that:
     # prints 1, 2, 3 or a permutation thereof
 
 
-<span id="immutable" />
+<span id="immutable"></span>
 ### If Str is immutable, how does `s///` work? if Int is immutable, how does `$i++` work?
 
 In Perl 6, many basic types are immutable, but the variables holding them are
@@ -47,7 +47,7 @@ not. The `s///` operator works on a variable, into which it puts a newly
 creates string object. Likewise `$i++` works on the `$i` variable, not
 just on the value in it.
 
-<span id="ref" />
+<span id="ref"></span>
 ### What's up with array references and automatic derferencing? Do I still need the `@` sigil?
 
 In Perl 6, nearly everything is a reference, so talking about taking
@@ -84,7 +84,7 @@ or by calling the `.item` method on an expression.
 `[...]` array literals do not flatten into lists.
 
 
-<span id="sigils" />
+<span id="sigils"></span>
 ### Why sigils? Couldn't you do without them?
 
 There are several reasons:
@@ -95,7 +95,7 @@ There are several reasons:
 * many natural languages use mandatory noun markers, so our brains are built to handle it
 
 
-<span id="coroutine" />
+<span id="coroutine"></span>
 ### Does Perl 6 have coroutines? What about `yield`?
 
 Perl 6 has no `yield` statement like python does, but it does offer similar
@@ -148,7 +148,7 @@ for more details) with all the named arguments that the user passes to the
 constructor. `:$!x` is a named parameter with name `x`, and when called
 with a named argument of name `x`, its value is bound to the attribute `$!x`.
 
-<span id="say" />
+<span id="say"></span>
 ### How and why do `say` and `print` differ?
 
 The most obvious difference is that `say` appends a newline at the
@@ -175,7 +175,7 @@ nothing in that value except the type).
 So `say` is optimized for debugging and display to people, `print` 
 is more suitable for producing output for other programs to consume.
 
-<span id="tokenrule" /> <span id="token" /> <span id="rule" />
+<span id="tokenrule"></span> <span id="token"></span> <span id="rule"></span>
 ### What's the difference between `token` and `rule` ?
 
 `regex`, `token` and `rule` all three introduce regexes, but with
@@ -193,7 +193,7 @@ of each branch of an alternation is ignored.
 
 `regex` declares a plain regex without any implied modifiers.
 
-<span id="diefail" /><span id="fail">
+<span id="diefail"></span><span id="fail">
 ### What's the difference between `die` and `fail`?
 
 `die` throws an exception.
@@ -209,7 +209,7 @@ as an ordinary object.
 A Failure returns False from a `defined` check, and you can exctract
 the exception with the `exception` method.
 
-<span id="want" /><span id="wantarray" />
+<span id="want"></span><span id="wantarray"></span>
 ### Why is `wantarray` or `want` gone? Can I return different things in different contexts?
 
 Perl has the `wantarray` function that tells you whether it is called in
@@ -235,10 +235,10 @@ For example regex matches return [Match objects that know how to respond
 to list indexing, hash indexing, and that can turn into the matched
 string](http://doc.perl6.org/type/Match).
 
-<span id="meta" />
+<span id="meta"></span>
 ## Meta Questions and Advocacy
 
-<span id="ready" />
+<span id="ready"></span>
 ### When will Perl 6 be ready? Is it ready now?
 
 Readiness of programming languages and their compilers is not a binary
@@ -251,7 +251,7 @@ matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
 
 
-<span id="features" />
+<span id="features"></span>
 ### Why should I learn Perl 6? What's so great about it?
 
 Perl 6 unifies many great ideas that aren't usually found in other programming
@@ -294,7 +294,7 @@ Please see the [feature comparison
 matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
 
-<span id="cpan" /><span id="CPAN" />
+<span id="cpan"></span><span id="CPAN"></span>
 ## Is there a CPAN for Perl 6? Or will Perl 6 use the Perl 5 CPAN?
 
 There isn't yet a module repository for Perl 6 as sophisticated as CPAN.
@@ -302,7 +302,7 @@ But [modules.perl6.org](http://modules.perl6.org/) has a ist of known
 Perl 6 modules, and [panda](https://github.com/tadzik/panda/) can install
 and precompile those that work with [rakudo](http://rakudo.org/).
 
-<span id="needanswers" />
+<span id="needanswers"></span>
 ## Questions still wanting answers
 
 (none at the moment)
