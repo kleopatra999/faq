@@ -8,9 +8,11 @@ Source can be found [on github](https://github.com/perl6/faq).
 <span id="so"></span>
 ### What is `so`?
 
-`so` is a loose precedence operator that coerces to `Bool`.
+`so` is a loose precedence operator that coerces to `Bool`. The
+logical opposite of `not`, it returns a `Bool` with a preserved
+boolean value instead of the opposite one.
 
-It has the same semantics as the `?` prefix operator, just like
+`so` has the same semantics as the `?` prefix operator, just like
 `and` is the low-precedence version of `&&`.
 
 Example usage:
