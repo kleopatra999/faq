@@ -115,7 +115,7 @@ routines that return lazy lists:
     # on a lazy list
     my @squares := (1..*).map(-> $x { $x * $x });
 
-<span id="privattr">
+<span id="privattr"></span>
 ### Why can't I initialize private attributes from the new method, and how can I fix this?
 
 A code like
@@ -195,7 +195,7 @@ of each branch of an alternation is ignored.
 
 `regex` declares a plain regex without any implied modifiers.
 
-<span id="diefail"></span><span id="fail">
+<span id="diefail"></span><span id="fail"></span>
 ### What's the difference between `die` and `fail`?
 
 `die` throws an exception.
