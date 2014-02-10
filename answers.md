@@ -97,6 +97,9 @@ or by calling the `.item` method on an expression.
 
 `[...]` array literals do not flatten into lists.
 
+See also [the documentation on containers and
+flattening](http://doc.perl6.org/language/containers).
+
 
 <span id="sigils"></span>
 ### Why sigils? Couldn't you do without them?
