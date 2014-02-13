@@ -25,7 +25,7 @@ converted to Bool before being printed.
 <span id="mu"></span>
 ### What is the difference between `Any` and `Mu`?
 
-`Mu` is the base time from which all other types are derived.  `Any` is
+`Mu` is the base type from which all other types are derived.  `Any` is
 therefore derived from `Mu`, and represents just about any kind of Perl 6
 value.  The major distinction is that `Any` excludes `Junction`.
 
