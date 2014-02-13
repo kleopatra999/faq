@@ -25,7 +25,7 @@ converted to Bool before being printed.
 <span id="mu"></span>
 ### What is the difference between `Any` and `Mu`?
 
-`Mu` is the base time from which all other types are derived.  `Any` is
+`Mu` is the base type from which all other types are derived.  `Any` is
 therefore derived from `Mu`, and represents just about any kind of Perl 6
 value.  The major distinction is that `Any` excludes `Junction`.
 
@@ -58,7 +58,7 @@ If you want to do it anyway, you can abuse autothreading for that:
 
 In Perl 6, many basic types are immutable, but the variables holding them are
 not. The `s///` operator works on a variable, into which it puts a newly
-creates string object. Likewise `$i++` works on the `$i` variable, not
+created string object. Likewise `$i++` works on the `$i` variable, not
 just on the value in it.
 
 <span id="ref"></span>
