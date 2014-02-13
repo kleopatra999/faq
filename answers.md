@@ -58,7 +58,7 @@ If you want to do it anyway, you can abuse autothreading for that:
 
 In Perl 6, many basic types are immutable, but the variables holding them are
 not. The `s///` operator works on a variable, into which it puts a newly
-creates string object. Likewise `$i++` works on the `$i` variable, not
+created string object. Likewise `$i++` works on the `$i` variable, not
 just on the value in it.
 
 <span id="ref"></span>
