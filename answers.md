@@ -182,12 +182,12 @@ by the programmer, and `$obj.perl` gives a Perlish representation.
 
 For example type objects, also known as "undefined values", stringify
 to an empty string and warn, whereas the `gist` method returns the name
-of the type, followed by an empty pair of parenthesis (to indicate there's
+of the type inside a pair of parenthesis (to indicate there's
 nothing in that value except the type).
 
     my Date $x;     # $x now contains the Date type object
     print $x;       # empty string plus warning
-    say $x;         # Date()\n
+    say $x;         # (Date)\n
 
 So `say` is optimized for debugging and display to people, `print` 
 is more suitable for producing output for other programs to consume.
