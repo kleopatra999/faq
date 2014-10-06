@@ -26,13 +26,13 @@ converted to Bool before being printed.
 ### What is the difference between `Any` and `Mu`?
 
 `Mu` is the base type from which all other types are derived.  `Any` is
-therefore derived from `Mu`, and represents just about any kind of Perl 6
+derived from `Mu`, and represents just about any kind of Perl 6
 value.  The major distinction is that `Any` excludes `Junction`.
 
-The default type for new subroutine parameters is `Any`, so that when you
+The default type for subroutine parameters is `Any`, so that when you
 declare `sub foo ($a)`, you're really saying `sub foo (Any $a)`.  Similarly,
-new classes are presumed to inherit from `Any`, unless told otherwise with
-a statement like `is Mu`.
+class declarations are presumed to inherit from `Any`, unless told 
+otherwise with a trait like `is Mu`.
 
 <span id="eigenstate"></span>
 ### How can I extract the values from a `Junction`?
