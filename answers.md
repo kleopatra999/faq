@@ -165,6 +165,9 @@ for more details) with all the named arguments that the user passes to the
 constructor. `:$!x` is a named parameter with name `x`, and when called
 with a named argument of name `x`, its value is bound to the attribute `$!x`.
 
+But if you allow setting private attributes from the outside, maybe they
+should really be public instead?
+
 <span id="say"></span>
 ### How and why do `say` and `print` differ?
 
