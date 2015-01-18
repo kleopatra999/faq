@@ -255,6 +255,20 @@ For example regex matches return [Match objects that know how to respond
 to list indexing, hash indexing, and that can turn into the matched
 string](http://doc.perl6.org/type/Match).
 
+<span id="num"></span>
+### Why can't I assign all numbers to variable typed `Num`?
+
+    my Num $x = 42;
+    # dies with
+    # Type check failed in assignment to '$x'; expected 'Num' but got 'Int'
+
+[Num](http://doc.perl6.org/type/Num) is a floating-point type, and not
+compatible with [integers](http://doc.perl6.org/type/Int). If you want a type
+constraint that allows any numeric values, use
+[Numeric](http://doc.perl6.org/type/Numeric) (which also allows
+[complex numbers](http://doc.perl6.org/type/Complex)), or
+[Real](http://doc.perl6.org/type/Real) if you want to exclude complex numbers.
+
 <span id="meta"></span>
 ## Meta Questions and Advocacy
 
