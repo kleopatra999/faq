@@ -307,7 +307,7 @@ Unlike most languages, it offers
 * junctions of values
 * easy access to higher-order functional features like partial application and currying
 * separate mechanism for subtyping (inheritance) and code reuse (role application)
-* optional type annotations
+* optional type annotations (gradual typing)
 * powerful run-time multi dispatch for both subroutines and methods based on
   arity, types and additional code constraints
 * lexical imports
