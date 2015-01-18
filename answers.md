@@ -8,8 +8,10 @@ Source can be found [on github](https://github.com/perl6/faq).
 <span id="so"></span>
 ### What is `so`?
 
-`so` is a loose precedence operator that coerces to `Bool`. The
-logical opposite of `not`, it returns a `Bool` with a preserved
+[so](http://doc.perl6.org/routine/so) is a loose precedence operator
+that coerces to [Bool](http://doc.perl6.org/type/Bool). The
+logical opposite of [not](http://doc.perl6.org/routine/not), it returns
+a `Bool` with a preserved
 boolean value instead of the opposite one.
 
 `so` has the same semantics as the `?` prefix operator, just like
@@ -19,13 +21,14 @@ Example usage:
 
     say so 1|2 == 2;    # Bool::True
 
-In this example, the result of the comparison (which is a `Junction`), is
+In this example, the result of the comparison (which is a [Junction](http://doc.perl6.org/type/Junction)), is
 converted to Bool before being printed.
 
 <span id="mu"></span>
 ### What is the difference between `Any` and `Mu`?
 
-`Mu` is the base type from which all other types are derived.  `Any` is
+[Mu](http://doc.perl6.org/type/Mu) is the base type from which all
+other types are derived. [Any](http://doc.perl6.org/type/Mu) is
 derived from `Mu`, and represents just about any kind of Perl 6
 value.  The major distinction is that `Any` excludes `Junction`.
 
