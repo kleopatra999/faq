@@ -64,6 +64,9 @@ not. The `s///` operator works on a variable, into which it puts a newly
 created string object. Likewise `$i++` works on the `$i` variable, not
 just on the value in it.
 
+See also: [documentation on
+containers](http://doc.perl6.org/language/containers).
+
 <span id="ref"></span>
 ### What's up with array references and automatic derferencing? Do I still need the `@` sigil?
 
