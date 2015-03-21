@@ -347,7 +347,8 @@ and precompile those that work with [rakudo](http://rakudo.org/).
 
 Many people have suggested that Perl 6 is different enough from the previous
 Perl versions that we should consider renaming it, often also in the context
-of implying that Perl 6 hurts Perl 5 somehow.
+of implying that Perl 6 hurts Perl 5, s/shoehow/simply by having the same name
+and a larger version number.
 
 The main reasons that Perl 6 still has "Perl" in the name are:
 
@@ -361,7 +362,7 @@ The main reasons that Perl 6 still has "Perl" in the name are:
   object system feels closer to Perl 6 than to Perl 1 code
 * "Perl" is still a strong brand name, which we don't want to throw away
   lightly
-* It is very hard to find a good alternative name instead. And no, "camelia"
+* It is very hard to find a good alternative name. And no, "camelia"
   and "rakudo" are not good names for a programming language (even if they are
   fine for our mascot and the leading compiler)
 * Even if Perl 6 changed its name, an incremental update to Perl 5 likely
