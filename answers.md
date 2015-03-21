@@ -342,6 +342,33 @@ But [modules.perl6.org](http://modules.perl6.org/) has a list of known
 Perl 6 modules, and [panda](https://github.com/tadzik/panda/) can install
 and precompile those that work with [rakudo](http://rakudo.org/).
 
+<span id="naming"></span>
+## Why not renaming to something other than "Perl"?
+
+Many people have suggested that Perl 6 is different enough from the previous
+Perl versions that we should consider renaming it, often also in the context
+of implying that Perl 6 hurts Perl 5 somehow.
+
+The main reasons that Perl 6 still has "Perl" in the name are:
+
+* Perl 6 is still a very perlish language, following the same underlying ideas
+  as previous versions (sigils for mini-namespaces, There Is More Than One Way
+  To Do It, caring about both [manipulexity and
+  whipuptitude](http://www.perl.com/pub/2006/01/12/what_is_perl_6.html),
+  taking many ideas from natural language (like disambiguation through
+  context))
+* Perl 6 code feels very perlish. A Perl 5 program using Moose or a similar
+  object system feels closer to Perl 6 than to Perl 1 code
+* "Perl" is still a strong brand name, which we don't want to throw away
+  lightly
+* It is very hard to find a good alternative name instead. And no, "camelia"
+  and "rakudo" are not good names for a programming language (even if they are
+  fine for our mascot and the leading compiler)
+* Even if Perl 6 changed its name, an incremental update to Perl 5 likely
+  couldn't claim the version 6, because the name Perl 6 sticks in people's
+  head, and will long be associated with what it is today
+
+
 <span id="needanswers"></span>
 ## Questions still wanting answers
 
