@@ -347,7 +347,7 @@ and precompile those that work with [rakudo](http://rakudo.org/).
 
 Many people have suggested that Perl 6 is different enough from the previous
 Perl versions that we should consider renaming it, often also in the context
-of implying that Perl 6 hurts Perl 5, s/shoehow/simply by having the same name
+of implying that Perl 6 hurts Perl 5, simply by having the same name
 and a larger version number.
 
 The main reasons that Perl 6 still has "Perl" in the name are:
