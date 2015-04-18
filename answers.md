@@ -76,11 +76,11 @@ can also contain arrays directly:
 
     my @a = 1, 2, 3;
     say @a;                 # "1 2 3\n"
-    say @a.WHAT;            # Array()
+    say @a.WHAT;            # (Array)
 
     my $scalar = @a;
     say $scalar;            # "1 2 3\n"
-    say $scalar.WHAT;       # Array()
+    say $scalar.WHAT;       # (Array)
 
 The big difference is that arrays inside a scalar variable do not flatten in
 list context:
