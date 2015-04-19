@@ -290,6 +290,9 @@ Please see the [feature comparison
 matrix](http://perl6.org/compilers/features) for an overview of implemented
 features.
 
+Please note that Larry Wall has announced at the FOSDEM in 2015, that a
+production release of Rakudo Perl 6 is planned for Christmas *2015*.
+
 
 <span id="features"></span>
 ### Why should I learn Perl 6? What's so great about it?
