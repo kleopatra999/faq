@@ -136,6 +136,11 @@ routines that return lazy lists:
     # on a lazy list
     my @squares := (1..*).map(-> $x { $x * $x });
 
+<span id="unspace"></span>
+### Why do I need a backslash (unspace) to split method calls across multiple lines?
+
+(Please add answer here.)
+
 <span id="privattr"></span>
 ### Why can't I initialize private attributes from the new method, and how can I fix this?
 
