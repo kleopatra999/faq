@@ -358,6 +358,20 @@ Perl versions that we should consider renaming it, often also in the context
 of implying that Perl 6 hurts Perl 5, simply by having the same name
 and a larger version number.
 
+The original reason for naming it "Perl 6" was that Perl 6 was, in fact, meant
+to be the successor to Perl 5. It all started when Perl 5 was in a slump, in
+terms of community interest and activity, and [the throwing of some coffee
+mugs](http://strangelyconsistent.org/blog/happy-10th-anniversary-perl-6) led to
+work on Perl 6 starting, a sequel meant to revitalize the Perl community.
+
+A few years in, however, renewed interest in Perl 5 appeared when Perl 6
+appeared to be taking too long to develop. So with Perl 5 being improved
+concurrently alongside Perl 6's development, we end up where we are today: two
+languages, neither the successor to the other.
+
+So the name in the first place is a historical artifact, like anything that
+still has the word "new" in its title (e.g. "New York", "new object model").
+
 The main reasons that Perl 6 still has "Perl" in the name are:
 
 * Perl 6 is still a very perlish language, following the same underlying ideas
@@ -368,15 +382,14 @@ The main reasons that Perl 6 still has "Perl" in the name are:
   context))
 * Perl 6 code feels very perlish. A Perl 5 program using Moose or a similar
   object system feels closer to Perl 6 than to Perl 1 code
+* Even if Perl 6 changed its name, an incremental update to Perl 5 likely
+  couldn't claim the version 6, because the name Perl 6 sticks in people's
+  heads, and will long be associated with what it is today
 * "Perl" is still a strong brand name, which we don't want to throw away
   lightly
 * It is very hard to find a good alternative name. And no, "camelia"
   and "rakudo" are not good names for a programming language (even if they are
   fine for our mascot and the leading compiler)
-* Even if Perl 6 changed its name, an incremental update to Perl 5 likely
-  couldn't claim the version 6, because the name Perl 6 sticks in people's
-  head, and will long be associated with what it is today
-
 
 <span id="needanswers"></span>
 ## Questions still wanting answers
