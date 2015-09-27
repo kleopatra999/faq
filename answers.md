@@ -139,7 +139,68 @@ routines that return lazy lists:
 <span id="unspace"></span>
 ### Why do I need a backslash (unspace) to split method calls across multiple lines?
 
-(Please add answer here.)
+In Perl 6, a method call is like any other postfix operator. And all postfix
+operators in Perl 6 disallow whitespace between the operator and its term:
+
+    sub do-safely($codestr) {
+        EVAL('$codestr');
+        CATCH {
+            default {
+                say "error occurred"
+            }
+        }
+    }
+
+    do-safely('my $a = 41; say $a++');   # says "41"
+    do-safely('my $a = 41; say $a ++');  # says "error occurred"
+
+And the reason for that is because it can cause confusion between postfix
+operators and infix operators. The standard operators in Perl 6 are specified so
+that the infix/postfix confusion can't result there, but it's all too easy to
+make it happen.
+
+If you were to define your own `infix:<++>` for some purpose. When you do this,
+the infix operator *needs* space before it, lest it gets confused with the
+postfix version:
+
+    #| Post-increment the left side $b times
+    sub infix:<++>($a is rw, $b) { my $old = $a; $a++ for ^$b; $old }
+
+    my $a = 35;
+
+    say $a ++ 7;  # says 35 ($a is now 42)
+    say $a ++7;   # says 42 ($a is now 49)
+    say $a++7;    # parse error (compiler sees $a++ followed by a stray 7)
+    say $a++ 7;   # parse error (same reason as above)
+
+(Just to note, space isn't always required around an infix operator, it's only a
+requirement when there's a postfix operator with the same name.)
+
+So, we use space to distinguish a postfix operator and infix operator. If we
+allowed whitespace before a postfix operator, then whenever you defined your own
+`infix:<++>` your postfix operators could get confused:
+
+    sub infix:<++>($a is rw, $b) { my $old = $a; $a++ for ^$b; $old }
+    my $a = 41;
+
+    say $a ++;  # "Missing required term after infix", because there's an infix:<++> now
+
+Imagine using a module that suddenly added an infix operator spelled the same as
+a postfix. In a world where you could put space before a postfix operator, that
+"Missing required term" error would suddenly start showing up everywhere.
+
+Fortunately, the unspace lets you tell the compiler to ignore whitespace between
+two tokens (in the grammatical sense of "token") where it would otherwise cause
+problems:
+
+    my $a = 41;
+    say $a\ ++;  # just like $a++
+
+And this is what lets you line up method calls on a dot, or even right after it:
+
+    say (-42.6).abs\
+               .round.\  # yeah, .round. is weird. Just for illustration here.
+                atan;
 
 <span id="privattr"></span>
 ### Why can't I initialize private attributes from the new method, and how can I fix this?
@@ -154,7 +215,7 @@ A code like
     }
     A.new(x => 5).show-x;
 
-does not print 5. Private attributes are /private/, which means invisible to
+does not print 5. Private attributes are *private*, which means invisible to
 the outside. If the default constructor could initialize them, they would leak
 into the public API.
 
