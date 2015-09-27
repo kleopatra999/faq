@@ -155,12 +155,12 @@ operators in Perl 6 disallow whitespace between the operator and its term:
     do-safely('my $a = 41; say $a ++');  # says "error occurred"
 
 And the reason for that is because it can cause confusion between postfix
-operators and infix operators. The standard operators in Perl 6 are specified so
-that the infix/postfix confusion can't result there, but it's all too easy to
-make it happen.
+operators and infix operators. The standard operators in Perl 6 are laid out so
+that the infix/postfix confusion can't result in using them, but it's all too
+easy to make it happen.
 
-If you were to define your own `infix:<++>` for some purpose. When you do this,
-the infix operator *needs* space before it, lest it gets confused with the
+Let's say you were to define your own `infix:<++>` for some reason. When you do
+this, the infix operator *needs* space before it, lest it gets confused with the
 postfix version:
 
     #| Post-increment the left side $b times
