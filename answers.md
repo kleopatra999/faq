@@ -1,6 +1,6 @@
 # Perl 6 FAQ
 
-Source can be found [on github](https://github.com/perl6/faq).
+Source can be found [on GitHub](https://github.com/perl6/faq).
 
 <span id="language"></span>
 ## Language Features
@@ -121,7 +121,7 @@ There are several reasons:
 <span id="coroutine"></span>
 ### Does Perl 6 have coroutines? What about `yield`?
 
-Perl 6 has no `yield` statement like python does, but it does offer similar
+Perl 6 has no `yield` statement like Python does, but it does offer similar
 functionality through lazy lists. There are two popular ways to write
 routines that return lazy lists:
 
@@ -298,7 +298,7 @@ A `Failure` is an "unthrown" or "soft" exception. It is an object that
 contains the exception, and throws the exception when the Failure is used
 as an ordinary object.
 
-A Failure returns False from a `defined` check, and you can exctract
+A Failure returns False from a `defined` check, and you can extract
 the exception with the `exception` method.
 
 <span id="want"></span><span id="wantarray"></span>
