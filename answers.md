@@ -68,7 +68,7 @@ See also: [documentation on
 containers](http://doc.perl6.org/language/containers).
 
 <span id="ref"></span>
-### What's up with array references and automatic derferencing? Do I still need the `@` sigil?
+### What's up with array references and automatic dereferencing? Do I still need the `@` sigil?
 
 In Perl 6, nearly everything is a reference, so talking about taking
 references doesn't make much sense. Unlike Perl 5, scalar variables
