@@ -277,7 +277,7 @@ slightly different semantics.
 rule from backtracking.
 
 `rule` implies both the `:ratchet` and `:sigspace` (short `:s`)
-modifer, which means a rule doesn't backtrack, and it treats
+modifier, which means a rule doesn't backtrack, and it treats
 whitespace in the text of the regex as  `<.ws>` calls (ie
 matches whitespace, which is optional except between two word
 characters). Whitespace at the start of the regex and at the start
