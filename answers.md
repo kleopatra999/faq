@@ -304,7 +304,7 @@ the exception with the `exception` method.
 <span id="want"></span><span id="wantarray"></span>
 ### Why is `wantarray` or `want` gone? Can I return different things in different contexts?
 
-Perl has the `wantarray` function that tells you whether it is called in
+Perl 5 has the `wantarray` function that tells you whether it is called in
 void, scalar or list context. Perl 6 has no equivalent construct,
 because context does not flow inwards, i.e. a routine cannot know which
 context it is called in.
